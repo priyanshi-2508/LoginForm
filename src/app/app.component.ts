@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'practice-app';
+
+  isChange = false;
+  
+  onChange(item:boolean){
+    this.isChange = true;
+  }
+
 }

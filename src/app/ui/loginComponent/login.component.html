@@ -1,0 +1,34 @@
+<div class="login-form">
+    <form (submit)="onLoginClick()">
+        <div class="username">
+            <label> Username : </label><br>
+            <app-textbox (getValue)="receivedValue($event)"   [ngClass]="{ 'text-danger': !isUserNameValid  }"  [typeOfBox]="'text'"  [nameOfBox]="userName" [placeholder]="'Enter Username'"></app-textbox> <br>
+            <!-- {{userName}} -->
+            <span class="span_class" *ngIf="isUserNameShown"> Username is required </span>
+        </div> 
+        <div class="password">
+            <label> Password : </label><br>
+            <app-textbox (getValue)="receivedValue($event)" [ngClass]="{ 'text-danger': !isPasswordValid  }" [typeOfBox]="'password'" [placeholder]="'Enter Password'"></app-textbox> <br>
+            <span class="span_class" *ngIf="!isPasswordValid">Password is required</span>
+        </div> 
+        <div class="forgot_password">
+            <a>Forgot Password ?</a>
+        </div>  
+        <div class = "loginBtn">  
+            <app-button [typeOfBtn]="'submit'" [button_name]="'Login'"></app-button>
+        </div> 
+    </form>
+</div>
+
+
+
+
+
+
+
+
+<!-- 
+    (blur)="isFieldUserNameValid()"
+    [(ngModel)]="userName" 
+[nameOfBox]="'userName'"
+[(ngModel)]="password" [nameOfBox]="'password'"   -->

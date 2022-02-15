@@ -1,0 +1,15 @@
+<div class="header">
+    <div class="left">
+        <app-normal [n_name]="'About'"></app-normal>
+        <app-normal [n_name]="'Products'"></app-normal>
+        <app-normal [n_name]="'For Teams'"></app-normal>
+    </div>
+    <div class="right">
+        <app-search [searchbar]="'Type here to search'"></app-search>
+
+        <app-button [typeOfBtn]="'button'"   *ngIf="!isLoginTrue"  [button_name]="'Login'"></app-button>
+        <app-button [typeOfBtn]="'button'" (click)="logoutHandler()"  *ngIf="isLoginTrue" [button_name]="'Logout'"></app-button>
+        <app-button [typeOfBtn]="'button'" [button_name]="'SignIn'"></app-button> 
+        
+    </div>
+</div>

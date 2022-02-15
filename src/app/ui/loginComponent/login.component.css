@@ -1,0 +1,50 @@
+.login-form{
+    background-color: #9DAAF2;
+    margin-top:150px;
+    width: 30%;
+    height: 250px;
+    margin-left:460px;
+    /* padding:20px; */
+    border: 2px solid #F4DB7D;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+   flex-direction: column;
+   font-size: 18px;
+}
+
+
+
+.username{
+    color:#1A2238;
+    justify-content: center;
+    margin: 10px;
+}
+.password{
+    color:#1A2238;
+    justify-content: center;
+    margin: 10px;
+}
+.loginBtn{
+    display: flex;
+    justify-content: center;
+}
+
+
+.span_class{
+    color: #FF6A3D;
+    border: 2px solid transparent;
+    background-color: rgb(199, 184, 184);
+    font-size: 13px;
+}
+
+.text-danger{
+    color:red;
+}
+
+.forgot_password{
+    color: #1A2238;
+    justify-content: center;
+    margin: 14px;
+    
+}
