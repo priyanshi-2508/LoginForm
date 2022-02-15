@@ -19,7 +19,7 @@ export class LoginComponent{
     @Output() eve = new EventEmitter();
 
     receivedValue(value : any){
-        this.userName = value;
+        // this.userName = value;
     }
 
     isFieldUserNameValid(){
