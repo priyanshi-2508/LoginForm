@@ -6,7 +6,6 @@ import {Component, Input } from '@angular/core';
     styleUrls:['./button.component.css']
 })
 export class ButtonComponent{
-    @Input() button_name='';
     @Input() typeOfBtn = '';
     @Input() onLogin=false;
 }

@@ -7,9 +7,9 @@
     <div class="right">
         <app-search [searchbar]="'Type here to search'"></app-search>
 
-        <app-button [typeOfBtn]="'button'"   *ngIf="!isLoginTrue"  [button_name]="'Login'"></app-button>
-        <app-button [typeOfBtn]="'button'" (click)="logoutHandler()"  *ngIf="isLoginTrue" [button_name]="'Logout'"></app-button>
-        <app-button [typeOfBtn]="'button'" [button_name]="'SignIn'" *ngIf="!isLoginTrue" ></app-button> 
+        <app-button [typeOfBtn]="'button'"   *ngIf="!isLoginTrue" >Login</app-button>
+        <app-button [typeOfBtn]="'button'" (click)="logoutHandler()"  *ngIf="isLoginTrue" >Logout</app-button>
+        <app-button [typeOfBtn]="'button'" *ngIf="!isLoginTrue" >SignIn</app-button> 
         
     </div>
 </div>
