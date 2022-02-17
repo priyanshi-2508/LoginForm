@@ -2,24 +2,19 @@
     <form (submit)="onLoginClick()">
         <div class="username">
             <label> Username : </label><br>
-            <app-textbox (getValue)="receivedValue($event)" 
-            [ngClass]="{ 'text-danger': !isUserNameValid  }" 
-            [typeOfBox]="'text'"
-            [nameOfBox]="userName" 
-            [placeholder]="'Enter Username'"></app-textbox> <br>
 
-            {{userName}}
-            
-            <span class="span_class" *ngIf="isUserNameShown"> Username is required </span>
+            <app-textbox (blur)="usernameField.isValid()"
+            [nameOfBox]="usernameField"  ></app-textbox> <br>
+            <span class="span_class" *ngIf="!usernameField.isFieldValid">{{usernameField.validationMsg}} </span>
         </div> 
+        
         <div class="password">
             <label> Password : </label><br>
-            <app-textbox (getValue)="receivedValue($event)"
-             [ngClass]="{ 'text-danger': !isPasswordValid  }"
-             [typeOfBox]="'password'" 
-             [placeholder]="'Enter Password'"></app-textbox> <br>
+            <app-textbox  (blur)="passwordField.isValid()" 
+             [ngClass]="{ 'text-danger': !passwordField.isFieldValid }"
+             [nameOfBox]="passwordField"></app-textbox> <br>
 
-            <span class="span_class" *ngIf="!isPasswordValid">Password is required</span>
+            <span class="span_class" *ngIf="!passwordField.isFieldValid">{{passwordField.validationMsg}}</span>
         </div> 
         <div class="forgot_password">
             <a>Forgot Password ?</a>

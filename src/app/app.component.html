@@ -1,4 +1,4 @@
 <div class="main">
-    <app-header [isLoginTrue]="isChange"></app-header>
-    <app-login (eve)="onChange($event)"></app-login>
+    <app-header [isLoginTrue]="isChange"  (afterLoggedIn)="onLoggedIn($event)"></app-header>
+    <app-login (eve)="onChange($event)" [whetherUserLoggedIn]="isLoggedInVar"></app-login>
 </div>

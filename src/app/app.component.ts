@@ -9,9 +9,14 @@ export class AppComponent {
   title = 'practice-app';
 
   isChange = false;
+  isLoggedInVar = false;
   
   onChange(item:boolean){
     this.isChange = true;
+  }
+
+  onLoggedIn(item:boolean){
+    this.isLoggedInVar=true;
   }
 
 }

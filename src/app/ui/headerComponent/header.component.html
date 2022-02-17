@@ -9,7 +9,7 @@
 
         <app-button [typeOfBtn]="'button'"   *ngIf="!isLoginTrue"  [button_name]="'Login'"></app-button>
         <app-button [typeOfBtn]="'button'" (click)="logoutHandler()"  *ngIf="isLoginTrue" [button_name]="'Logout'"></app-button>
-        <app-button [typeOfBtn]="'button'" [button_name]="'SignIn'"></app-button> 
+        <app-button [typeOfBtn]="'button'" [button_name]="'SignIn'" *ngIf="!isLoginTrue" ></app-button> 
         
     </div>
 </div>

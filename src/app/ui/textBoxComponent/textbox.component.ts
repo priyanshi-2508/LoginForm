@@ -6,10 +6,7 @@ import {Component, EventEmitter, Input, Output } from '@angular/core';
     styleUrls:['./textbox.component.css']
 })
 export class TextBoxComponent{
-  @Input() placeholder='';
-  @Input() typeOfBox='';
-  @Input() nameOfBox = '';
-  @Input() valueOfBox='';
+  @Input() nameOfBox : any;
 
   @Output() InputValue = new EventEmitter();
 
